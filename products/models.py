@@ -14,7 +14,7 @@ class Product(models.Model):
     img = models.ImageField(upload_to='images/')
 
     def __str__(self):
-        return self.name
+        return self.name + str(self.pub_date)
 
     def bod(self):
         return self.body[:100]
